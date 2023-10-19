@@ -1,17 +1,12 @@
-import {useEffect} from "react";
-
+import style from './App.module.css'
+import {Table} from "./components";
 function App() {
-
-    async function loadData() {
-        const data = fetch('https://kineticzephyr.onrender.com/periodictable')
-            .then(res => res.json())
-            .then(res => console.log(res))
-    }
-
-    useEffect(() =>{
-        loadData()
-    })
-    return <h1>Periodic Table</h1>
+    return (
+        <>
+            <h1 className={style.title}>Periodic Table</h1>
+            <Table />
+        </>
+    )
 }
 
 export default App
