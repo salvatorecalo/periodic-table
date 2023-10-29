@@ -1,0 +1,56 @@
+.periodicTable {
+    display: grid;
+    grid-template-columns: repeat(18, 5rem);
+    grid-template-rows: repeat(7, 10rem);
+    grid-template-areas:
+    'H . . . . . . . . . . . . . . . . He'
+    'Li Be . . . . . . . . . . B C N O F Ne'
+    'Na Mg . . . . . . . . . . Al Si P S Cl Ar'
+    'K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr'
+    'Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe'
+    'Cs Ba La Hr Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn'
+    'Fr Ra Ac Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og';
+}
+
+#H {
+    grid-area: H;
+}
+
+#Li {
+    grid-area: Li;
+}
+
+#Na {
+    grid-area: Na;
+}
+
+#K {
+    grid-area: K;
+}
+
+#Rb {
+    grid-area: Rb;
+}
+
+#Cs {
+    grid-area: Cs;
+}
+
+#Fr {
+    grid-area: Fr;
+}
+#He {
+    grid-area: He;
+}
+
+#Be {
+    grid-area: Be;
+}
+
+#Mg {
+    grid-area: Mg;
+}
+
+#Hg {
+    grid-area: Hg;
+}

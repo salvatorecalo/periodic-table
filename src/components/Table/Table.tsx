@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Atom} from "../../interface/Atom.ts";
 import {AtomCell} from "../AtomCell/AtomCell.tsx";
+import style from'./Table.module.css'
 
 export function  Table() {
     const [atoms, setAtoms] = useState<Atom[]>([])
@@ -17,28 +18,24 @@ export function  Table() {
 
     useEffect(() =>{
         loadData()
-    })
+    },[])
 
     return (
-        <table>
-            <tbody>
-                <tr>
+        <div className={style.periodicTable}>
                     {
                         atoms && atoms.map((atom) => {
                             return (
-                                <td key={atom.id}>
                                     <AtomCell
+                                        key={atom.id}
                                         id={atom.id}
                                         symbol={atom.symbol}
-                                        atomic_mass={atom.atomic_mass}
-                                        electroNegativity={atom.electronegativity_pauling}
+                                        atomic_mass={Math.round(atom.atomic_mass)}
+                                        electronegativity_pauling={atom.electronegativity_pauling}
+                                        category={atom.category}
                                     />
-                                </td>
                             )
                         })
                     }
-                </tr>
-            </tbody>
-        </table>
+        </div>
     )
 }
